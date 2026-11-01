@@ -1,0 +1,147 @@
+$terracota: #a94e2c;
+$marrom: #7a3a20;
+$creme: #fff8f0;
+$cafe: #3b2217;
+$h-header: clamp(72px, 15svh, 140px);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  color: $marrom;
+  background-color: $creme;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1.25rem;
+  border-radius: 15px;
+
+  &:hover {
+    background-color: #f0e4d6;
+  }
+  &:focus-visible {
+    outline: 3px solid $creme;
+    outline-offset: 3px;
+  }
+}
+
+.header {
+  height: $h-header;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  background-color: $terracota;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .logo {
+    display: block;
+    height: 100%;
+
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding-inline: 1rem;
+  }
+  .btn-whatsapp {
+    padding: 0.625rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+main {
+  background-color: $terracota;
+}
+
+.hero {
+  min-height: calc(85svh - #{$h-header});
+  padding-block: 3rem;
+  padding-inline: 2rem;
+  background-color: $terracota;
+  color: $creme;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+
+  .titulo {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1;
+  }
+  .subtitulo {
+    max-width: 60ch;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+
+.mais-pedidos {
+  background-color: $creme;
+  color: $cafe;
+  border-radius: 2rem 2rem 0 0;
+  padding: 3rem 2rem;
+
+  .titulo-produtos {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .lista-produtos {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .produto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 16px;
+      background-color: #e4b79f;
+    }
+
+    .nome {
+      font-size: 1.25rem;
+    }
+
+    .preco {
+      font-weight: bold;
+      color: $terracota;
+    }
+  }
+}
+
+.btn-pedir {
+  align-self: flex-start;
+  color: $marrom;
+  font-weight: bold;
+}
