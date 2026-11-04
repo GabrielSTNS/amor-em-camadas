@@ -29,6 +29,7 @@ h3 {
   font-weight: bold;
   padding: 0.75rem 1.25rem;
   border-radius: 15px;
+  white-space: nowrap;
 
   &:hover {
     background-color: #f0e4d6;
@@ -57,6 +58,12 @@ h3 {
       display: block;
       height: 100%;
       width: auto;
+    }
+  }
+
+  .texto-extra {
+    @media (max-width: 480px) {
+      display: none;
     }
   }
 }
