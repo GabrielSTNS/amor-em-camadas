@@ -20,12 +20,11 @@ amorEmCamadas/
 ├── images/
 │   ├── icon.png
 │   └── logo.png
-├── pages/
-│   └── index.html
 ├── styles/
 │   ├── style.css
 │   ├── style.css.map
 │   └── style.scss
+│   index.html
 └── README.md
 ```
 
